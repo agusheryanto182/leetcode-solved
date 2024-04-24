@@ -11,4 +11,5 @@ func twoSum(nums []int, target int) []int {
         dict[valCurr] = indexCurr
     }
     return []int{}
+    
 }
