@@ -1,8 +1,7 @@
-func plusOne(digits []int) []int {
-	n := len(digits)
 
+func plusOne(digits []int) []int {
 	// Iterate from the least significant digit to the most significant digit
-	for i := n - 1; i >= 0; i-- {
+	for i := len(digits) - 1; i >= 0; i-- {
 		// Increment the current digit by 1
 		digits[i]++
 
