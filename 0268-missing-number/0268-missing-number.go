@@ -16,8 +16,6 @@ func missingNumber(nums []int) int {
 		}
 	}
 
-	fmt.Println(nums)
-
 	temp := 0
 	for k := 0; k < len(nums)-1; k++ {
 		if nums[0] != 0 {
