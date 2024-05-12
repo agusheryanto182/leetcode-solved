@@ -31,9 +31,10 @@
 
 
 func missingNumber(nums []int) int {
-    var currSum int
-    for i := 0; i < len(nums); i++ {
+    var currSum, fullSum int
+    for i := 0; i < len(nums); i++{
         currSum += nums[i]
+        fullSum += i
     }
-    return (len(nums) * (len(nums) + 1) / 2) - currSum
+    return fullSum + len(nums) - currSum;
 }
