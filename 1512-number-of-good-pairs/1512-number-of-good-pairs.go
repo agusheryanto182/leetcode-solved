@@ -11,5 +11,7 @@ func numIdenticalPairs(nums []int) int {
 			temp[j] = nums[j]
 		}
 	}
+	temp = nil
+
 	return counter
 }
