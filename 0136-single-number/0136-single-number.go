@@ -1,14 +1,17 @@
 func singleNumber(nums []int) int {
-	for i, numb := range nums {
-		for j := 0; j < len(nums); j++ {
-			if numb == nums[j] && i != j {
-				break
-			}
+	occurrence := make(map[int]int)
 
-			if j == len(nums)-1 {
-				return numb
-			}
+	// Menghitung kemunculan setiap angka
+	for _, num := range nums {
+		occurrence[num]++
+	}
+
+	// Mencari angka tunggal
+	for num, count := range occurrence {
+		if count == 1 {
+			return num
 		}
 	}
-	return 0
+
+	return 0 // Jika tidak ada angka tunggal, maka mengembalikan 0
 }
