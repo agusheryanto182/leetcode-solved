@@ -1,10 +1,10 @@
 func finalValueAfterOperations(operations []string) int {
 	result := 0
 	for _, char := range operations {
-		if char == "X++" || char == "++X" {
-			result = result + 1
+		if char[1] == '+' {
+			result++
 		} else {
-			result = result - 1
+			result--
 		}
 	}
 	return result
