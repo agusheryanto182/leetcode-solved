@@ -1,10 +1,8 @@
 func buildArray(nums []int) []int {
-    n := len(nums)
-    for i := range nums{
-        nums[i] = nums[i] + (n * (nums[nums[i]]%n))
+    arr:= make([]int , len(nums))
+    for i:=0 ; i<len(nums) ; i++{
+       arr[i] = nums[nums[i]] 
     }
-    for i := range nums{
-        nums[i] /= n
-    }
-    return nums
+    return arr
+    
 }
